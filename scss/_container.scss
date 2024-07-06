@@ -1,0 +1,133 @@
+// Container
+.container {
+  width: 60%;
+  margin: auto;
+  margin-top: 90px;
+  @include dgrid(1fr 3fr, center, center);
+  gap: 50px;
+
+  //   Container Left
+  &-left {
+    @include dflex(center, start);
+    flex-direction: column;
+    gap: 5px;
+
+    .img-container {
+      margin-bottom: 20px;
+      width: 100%;
+      height: 280px;
+
+      img {
+        border-radius: 50%;
+      }
+    }
+
+    .profile {
+      width: 100%;
+    }
+
+    .edit-btn {
+      margin: 20px 0;
+      border: 1px solid black;
+      border-radius: 8px;
+      width: 100%;
+      background-color: transparent;
+      padding: 5px 10px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .profile-btn {
+      display: none;
+      text-align: left;
+
+      i {
+        margin-right: 20px;
+      }
+    }
+
+    .border {
+      width: 100%;
+      height: 1px;
+      background-color: black;
+    }
+  }
+
+  .res-content {
+    display: none;
+  }
+
+  //   Container Right
+  &-right {
+    // Navbar
+    .nav {
+      @include dflex(space-between, center);
+      margin-bottom: 20px;
+    }
+
+    .pins {
+      margin-bottom: 20px;
+      @include dflex(space-between, center);
+    }
+
+    a {
+      color: $containerNavLinkColor;
+    }
+
+    // Card Container
+    .card {
+      &-container {
+        @include dgrid(1fr 1fr, center, center);
+        gap: 10px;
+      }
+
+      & {
+        border-radius: 8px;
+        position: relative;
+        height: 100px;
+        padding: 10px 15px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        transition: all 0.3s ease;
+      }
+
+      &:hover {
+        transform: scale(1.03);
+        cursor: pointer;
+      }
+
+      &-top {
+        @include dflex(space-between, center);
+        color: $pinnedTitle;
+        font-weight: 600;
+
+        span {
+          @include dflex(center, center);
+          gap: 5px;
+
+          a {
+            color: $containerNavLinkColor !important;
+          }
+        }
+
+        svg {
+          width: 18px;
+          height: 18px;
+        }
+      }
+
+      &-bottom {
+        position: absolute;
+        bottom: 10px;
+        @include dflex(center, center);
+        gap: 5px;
+
+        .circle {
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          background-color: $circleBgColor;
+        }
+      }
+    }
+  }
+}

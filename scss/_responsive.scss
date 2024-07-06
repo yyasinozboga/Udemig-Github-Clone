@@ -1,0 +1,92 @@
+@media screen and (max-width: 390px) {
+  .header-left {
+    width: 100%;
+    @include dflex(center, center);
+  }
+
+  .header-logo {
+    margin-left: 30px;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .form {
+    display: none !important;
+  }
+
+  .header-right {
+    display: none;
+  }
+
+  .res-menu-btn {
+    display: block !important;
+  }
+
+  .res-menu {
+    display: block !important;
+  }
+
+  .notification-container {
+    display: block !important;
+
+    .notification-btn {
+      display: block !important;
+    }
+
+    .circle {
+      display: block;
+    }
+  }
+
+  .container {
+    width: 100%;
+    padding: 0 20px;
+    @include dgrid(1fr, center, center);
+
+    &-left {
+      @include dgrid(1fr 2fr, center, center);
+      gap: 20px;
+
+      .img-container {
+        width: 100%;
+        height: 110px;
+      }
+
+      .content {
+        display: none;
+      }
+
+      .edit {
+        display: none;
+      }
+
+      .profile-btn {
+        display: block;
+      }
+
+      .border {
+        display: none;
+      }
+    }
+
+    .res-content {
+      margin-top: -70px;
+      display: block;
+    }
+
+    &-right {
+      margin-top: -50px;
+
+      .nav {
+        display: none;
+      }
+
+      .card-container {
+        @include dgrid(1fr, center, center);
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

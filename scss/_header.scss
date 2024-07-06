@@ -1,0 +1,168 @@
+// Header
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  padding: 0 20px;
+  background-color: $headerBgColor;
+  @include dflex(space-between, center);
+
+  &-logo {
+    svg {
+      width: 40px;
+      height: 40px;
+      fill: #fff;
+    }
+  }
+
+  // Header Left
+  &-left {
+    @include dflex(start, center);
+    gap: 10px;
+
+    // Form
+    .form {
+      @include dflex(center, center);
+
+      &-input,
+      &-btn {
+        border: none;
+        outline: none;
+        padding: 5px;
+        font-size: 16px;
+        height: 35px;
+        background-color: $formBgColor;
+        color: white;
+      }
+
+      &-input {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+
+      &-btn {
+        width: 40px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        cursor: pointer;
+
+        svg {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    // Navbar
+    .nav {
+      margin-left: 10px;
+      @include dflex(center, center);
+      gap: 10px;
+
+      &-link {
+        color: white;
+      }
+
+      &-item {
+        border-radius: 5px;
+        padding: 5px 10px;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: white;
+          cursor: pointer;
+
+          a {
+            color: $headerBgColor;
+          }
+        }
+      }
+    }
+  }
+
+  //   Header Right
+  &-right {
+    svg {
+      margin-right: 10px;
+      width: 22px;
+      height: 22px;
+      fill: white;
+    }
+  }
+
+  //   Res Menu
+  .res-menu-btn {
+    display: none;
+    position: absolute;
+    left: 20px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+  }
+
+  .res-menu {
+    display: none;
+    position: absolute;
+    top: -250px;
+    left: 0;
+    width: 100%;
+    background-color: $headerBgColor;
+    transition: all 0.3s ease;
+
+    &.show {
+      top: 60px;
+    }
+
+    &-item {
+      padding: 15px;
+      width: 100%;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: white;
+
+        .res-menu-link {
+          color: $headerBgColor;
+        }
+      }
+    }
+
+    &-link {
+      font-size: 20px;
+      color: white;
+    }
+  }
+
+  .notification-container {
+    display: none;
+    position: relative;
+  }
+
+  .notification-btn {
+    display: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+
+    svg {
+      fill: white;
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  .circle {
+    display: none;
+    position: absolute;
+    top: -5px;
+    right: 0px;
+    width: 12px;
+    height: 12px;
+    background-color: #3389e8;
+    border-radius: 50%;
+  }
+}
