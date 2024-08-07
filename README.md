@@ -1,4 +1,4 @@
-# Github Clone
+# Udemig Github Clone
 
 ## Used Technologies
 
